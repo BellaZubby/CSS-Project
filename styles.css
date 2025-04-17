@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  width: 100%;
+  height: 100px;
+  background-color: salmon;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  color: salmon;
+  font-size: 30px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a {
+  display: inline;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  color: bisque;
+}
+
+nav a:hover {
+  color: burlywood;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+nav a.active {
+  color: burlywood;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+main {
+  padding-top: 90px;
+}
+#about {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  background-color: bisque;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  padding: 0 25px;
+  border-radius: 25px;
+  border: 2px groove salmon;
+}
+.content p {
+  line-height: 1.8;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+}
+.about-btn {
+  border: none;
+  background-color: salmon;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: bisque;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out,
+    border 0.4s ease-in-out;
+}
+.about-btn:hover {
+  background-color: rgb(240, 176, 169);
+  color: rgb(17, 18, 17);
+  border: 1px solid salmon;
+}
+#work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 550px;
+}
+
+.work-paragraph {
+  line-height: 1.8;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  width: 50%;
+  text-align: center;
+  font-style: oblique;
+}
+.work-images {
+  display: flex;
+  gap: 25px;
+}
+
+.work-images img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.work-images a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  color: salmon;
+}
+.work-images figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+.work-images figcaption {
+  font-weight: 700;
+}
+
+#resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  gap: 20px;
+  width: 100%;
+  background-color: bisque;
+}
+.resume-list {
+  width: 50%;
+  border: 1px solid salmon;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  border-radius: 15px;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.resume-list dt {
+  color: salmon;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.resume-list li::marker {
+  color: salmon;
+}
+.resume-list li {
+  margin-top: 5px;
+}
+
+.personalInfo,
+.objective-description,
+.education-description,
+.skills-description {
+  margin-top: 7px;
+}
+.objective-title,
+.education-title,
+.skills-title {
+  margin-top: 15px;
+}
+.education-description a {
+  text-underline-offset: 4px;
+  color: black;
+  cursor: pointer;
+}
+.objective-description {
+  line-height: 1.3;
+  font-size: 17px;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding: 30px 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid salmon;
+  margin-top: 50px;
+  padding: 30px 25px;
+  background-color: #525150;
+  height: 70%;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: salmon;
+  font-weight: 500;
+}
+.label input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid salmon;
+  padding-bottom: 8px;
+}
+.label textarea {
+  outline: none;
+  border: 1px solid salmon;
+  background-color: transparent;
+}
+
+.label input::placeholder {
+  color: rgb(220, 213, 213);
+  opacity: 0.6;
+  padding-bottom: 10px;
+}
+.label textarea::placeholder {
+  color: rgb(220, 213, 213);
+  opacity: 0.6;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+footer h4 {
+  font-size: 20px;
+  color: salmon;
+}
+footer span {
+  color: salmon;
+  font-weight: 600;
+}
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: salmon;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .work-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .work-images img {
+    width: 100%;
+    height: 250px;
+  }
+  #work {
+    height: 100%;
+    padding: 25px 15px;
+  }
+  .work-images figcaption {
+    text-align: center;
+  }
+  .work-images figure {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .content {
+    height: 70%;
+    margin: 15px;
+  }
+  .about-btn {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .work-paragraph {
+    font-size: 17px;
+    width: 100%;
+  }
+  .work-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .work-images img {
+    width: 100%;
+    height: 250px;
+  }
+  #work {
+    height: 100%;
+    padding: 25px 15px;
+  }
+  .work-images figcaption {
+    text-align: center;
+  }
+  .work-images figure {
+    margin-right: 0px;
+  }
+  #resume {
+    height: 100%;
+    width: 100%;
+    padding: 30px 0;
+  }
+  .resume-list {
+    width: 85%;
+    padding: 20px 20px;
+  }
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 30px 0;
+    margin: 0 15px;
+  }
+  form {
+    margin-top: 50px;
+    padding: 30px 25px;
+    width: 80%;
+    height: 100%;
+  }
+  footer {
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  footer h4 {
+    font-size: 20px;
+    color: salmon;
+  }
+  footer span {
+    color: salmon;
+    font-weight: 600;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: salmon;
+  }
+}
